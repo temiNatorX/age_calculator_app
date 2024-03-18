@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --LightRed: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --OffWhite: hsl(0, 0%, 94%);
+  --LightGrey: hsl(0, 0%, 86%);
+  --SmokeyGrey: hsl(0, 1%, 44%);
+  --OffBlack: hsl(0, 0%, 8%);
+}
+
+input {
+  font-size: 1.5rem;
+}
+
+body {
+  background: var(--OffWhite);
+}
+
+.container {
+  width: 40.523%;
+  background: var(--White);
+  margin: 5% auto;
+  /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+  padding: 1.75rem;
+  border-radius: 0.6rem;
+  border-bottom-right-radius: 40%;
+}
+
+.form-wrapper {
+  display: flex;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  gap: 0.1rem;
+}
+
+.form-input {
+  flex: .25;
+}
+
+.form-input > input {
+  width: 80%;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  outline: none;
+  border: 0.1rem solid var(--LightGrey);
+}
+
+.form-input > label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--OffBlack);
+  font-weight: 500;
+}
+
+.day-err, .month-err, .year-err{
+  font-size: 8px;
+  color:var(--LightRed);
+  margin-top: 8px;
+}
+
+.form-submit{
+    display: flex;
+    align-items: center;
+}
+
+.form-submit > div {
+  width: 90%;
+  height: .1rem;
+  background: var(--LightGrey);
+}
+
+.form-submit > button{
+    background: var(--Purple);
+    border-radius: 50%;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.form-submit > button:hover{
+    background: var(--OffBlack);
+}
+
+.container-content{
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-style: italic;
+
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.container-content > .content > span{
+    color: var(--Purple);
+    font-weight: 800;
+}
+
+@media(max-width: 480px) {
+  .container{
+    width: 90%;
+  }
+  .form-input > input{
+    width: 90%;
+  }
+  .form-submit{
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-submit > button{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .form-submit > div{
+      width: 100%;
+    }
+}
+
+@media(min-width: 481px) and (max-width: 800px){
+  .container{
+    width: 70%;
+  }
+}
