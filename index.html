@@ -24,7 +24,7 @@
         color: hsl(228, 45%, 44%);
       }
     </style>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style2.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,34 +33,48 @@
     />
   </head>
   <body>
+    <section class="container">
+      <form action="" name="ageForm">
+        <div class="form-wrapper">
+          <div class="form-input">
+            <label for="Day">Day</label>
+            <input class="day" type="text" placeholder="DD" maxlength="2" name="day" />
+            <p class="day-err"></p>
+          </div>
+          <div class="form-input">
+            <label for="">MONTH</label>
+            <input class="month" type="text" placeholder="MM" name="month" />
+            <p class="month-err"></p>
+          </div>
+          <div class="form-input">
+            <label for="">YEAR</label>
+            <input class="year" type="text" placeholder="YYYY" name="year"/>
+            <p class="year-err"></p>
+          </div>
+        </div>
+        <div class="form-submit">
+            <div></div>
+            <button type="submit" class="btn">
+              <img src="./assets/images/icon-arrow.svg" alt="" />
+            </button>
+        </div>  
+      </form>
 
-    <div class="container">
-      <section class="section1">
-        <form action="">
-          <label for="Day" class="daylabel">DAY</label>
-          <!-- <input type="number" name="Day" placeholder="DD"> -->
-          <label for="Month" class="monthlabel">MONTH</label>
-          <!-- <input type="number" name="Month" placeholder="MM"> -->
-          <label for="Year">YEAR</label>
-          <br>
-          <input type="number" name="Day" placeholder="DD">
-          <input type="number" name="Month" placeholder="MM">
-          <input type="number" name="Year" placeholder="YYYY">
-        </form>
-      </section>
-      <div class="buttonline">
-      <hr>
-      <button type="button" id="submitButton">
-      <img src="./assets/images/icon-arrow.svg" alt="">
-      </button>
+      <div class="container-content">
+        <div class="content">
+          <span class="year-display">--</span>
+          <h1>years</h1>
+        </div>
+        <div class="content">
+          <span class="month-display">--</span>
+          <h1>months</h1>
+        </div>
+        <div class="content">
+          <span class="day-display">--</span>
+          <h1>days</h1>
+        </div>
       </div>
-      <section class="section2">
-        <h1><span>--</span>years</h1>
-        <h1><span>--</span>months</h1>
-        <h1><span>--</span>days</h1>
-      </section>
-    </div>
-
+    </section>
 
     <div class="attribution">
       Challenge by
@@ -68,5 +82,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+
+    <script src="./app.js"></script>
   </body>
 </html>
